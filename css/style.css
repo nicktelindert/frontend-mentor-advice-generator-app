@@ -11,6 +11,11 @@ body {
 h1 {
   color:  hsl(150, 100%, 66%);
   font-size: 18px;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: center;
 }
 
 #container {
