@@ -1,0 +1,12 @@
+body {
+  display: grid;
+  justify-content: center;
+}
+
+#container {
+  display: grid;
+  width: 1440px;
+  align-content: center;
+  justify-items: center;
+}
+
