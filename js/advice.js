@@ -1,28 +1,19 @@
 const advice_backend_url =  'https://api.adviceslip.com/advice';
 
-const getRandomAdvice = () => {
-  const request = new XMLHttpRequest()
-  request.open('GET', advice_backend_url, false)
-  request.send()
-  try {
-    return JSON.parse(request.responseText)
-
-  } catch (e) {
-    return false
-  }
+const getRandomAdvice = async () => {
+  return await fetch(advice_backend_url, {cache:'no-cache'}).then((response) => response.json())
 }
 
 const setRandomAdvice = (id, description) => {
-  const advice_title = `ADVICE #${id}`
-  document.querySelector('#advice-title').innerHTML = advice_title
+  document.querySelector('#advice-title').innerHTML = `ADVICE #${id}`
   document.querySelector('#advice-description').innerHTML = `	&#8220;${description}&#8221;`
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelector('#advice-dice-bottom').addEventListener('click', () => {
-    const advice = getRandomAdvice()
-    setRandomAdvice(advice.slip.id, advice.slip.advice)
+document.addEventListener('DOMContentLoaded', async (event) => {
+  document.querySelector ('#advice-dice-bottom').addEventListener ('click', async () => {
+    const advice = await getRandomAdvice ()
+    setRandomAdvice (advice.slip.id, advice.slip.advice)
   })
-  const advice = getRandomAdvice()
-  setRandomAdvice(advice.slip.id, advice.slip.advice)
+  const advice = await getRandomAdvice ()
+  setRandomAdvice (advice.slip.id, advice.slip.advice)
 })
