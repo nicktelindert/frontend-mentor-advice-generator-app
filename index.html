@@ -11,13 +11,13 @@
                 <div id="advice-container">
                     <div id="advice-inner">
                         <div id="advice-content">
-                            <h1 id="advice-title"></h1>
-                            <p id="advice-description"></p>
+                            <h1 id="advice-title" aria-live="assertive" aria-label="Advice title"></h1>
+                            <p id="advice-description" aria-live="assertive" aria-label="Advice description"></p>
                         </div>
-                        <div id="advice-border-bottom"></div>
+                        <div id="advice-border-bottom" role="separator"></div>
                         <nav id="advice-bottom">
                             <div id="advice-dice-bottom">
-                                <div class="dice-icon-img"></div>
+                                <div class="dice-icon-img" aria-label="Dice" role="button" aria-controls="advice-content"></div>
                             </div>
                         </nav>
                     </div>
