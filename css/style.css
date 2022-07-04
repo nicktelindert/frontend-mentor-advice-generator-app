@@ -71,24 +71,30 @@ p {
   padding: 2rem;
 }
 
-#advice-dice-bottom {
+#advice-dice-button {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   background-color: hsl(150, 100%, 66%);
   width: 64px;
   height:64px;
   border-radius: 100px;
   bottom: -32px;
+  border: none;
 }
 
 .dice-icon-img {
+  display: inline-block;
   background-image: url("../img/icon-dice.svg");
   background-position: center;
   background-repeat: no-repeat;
-  width: inherit;
-  height: inherit;
+  width: 64px;
+  height: 64px;
 }
 
-#advice-dice-bottom:hover :before {
+#advice-dice-button:hover :before {
   content: "";
   z-index: -1;
   position: absolute;

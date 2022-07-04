@@ -10,7 +10,7 @@ const setRandomAdvice = (id, description) => {
 }
 
 document.addEventListener('DOMContentLoaded', async (event) => {
-  document.querySelector ('#advice-dice-bottom').addEventListener ('click', async () => {
+  document.querySelector ('#advice-dice-button').addEventListener ('click', async () => {
     const advice = await getRandomAdvice ()
     setRandomAdvice (advice.slip.id, advice.slip.advice)
   })
