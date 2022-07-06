@@ -7,8 +7,6 @@ My biggest challenge is responsive design.
 - Getter better at responsive design
 - Getting better at CSS in general
 - Think about html/css before writing
-
-## Todo
 - WCAG compliance
 
 ## Tools
